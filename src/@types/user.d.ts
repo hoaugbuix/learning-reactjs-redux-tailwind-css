@@ -1,6 +1,7 @@
 export interface UserSignIn {
     usernameOrEmail: string;
     password: string;
+    rememberMe?: boolean;
 }
 
 interface ResLoginApi extends Res {
