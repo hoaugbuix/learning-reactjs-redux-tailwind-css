@@ -54,12 +54,13 @@ const SignIn = () => {
                 <div className="auth__group">
                     <h4>Login Form</h4>
                     <form className="form__group" onSubmit={handleSubmit(submitSignIn)}>
-                        {errors.usernameOrEmail && <p>Please check Username Or Email</p>}
+                        {errors.usernameOrEmail && <p style={{ color: 'red' }}>Please check Username Or Email</p>}
                         <div className="form__group-field">
                             <input type="text" className="form__group-filed-input" placeholder="Enter Username Or Email"
                                 {...register("usernameOrEmail", { required: "Username or email is required" })}
                             />
                         </div>
+                        {errors.password && <p style={{ color: 'red' }}>Please check Password</p>}
                         <div className="form__group-field">
                             <input type="password" className="form__group-filed-input" placeholder="Enter Password"
                                 {...register("password", { required: "Password is required", minLength: { value: 6, message: "Password must be at least 6 characters" } })} />
