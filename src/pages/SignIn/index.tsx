@@ -41,12 +41,12 @@ const SignIn = () => {
     useEffect(() => {
         const storedUsername = localStorage.getItem("username");
         const storedPassword = localStorage.getItem("password");
-
         if (storedUsername && storedPassword) {
             setValue("usernameOrEmail", storedUsername);
             setValue("password", storedPassword);
+            setValue("rememberMe", true)
         }
-    }, [setValue])
+    })
 
     return (
         <>
