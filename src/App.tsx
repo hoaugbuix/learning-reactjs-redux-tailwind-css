@@ -39,6 +39,7 @@ function App() {
 
 
   useEffect(() => {
+    console.log('is Loading User')
     dispatch(getAllUser(data) as any);
   }, [isLoading])
   return (
