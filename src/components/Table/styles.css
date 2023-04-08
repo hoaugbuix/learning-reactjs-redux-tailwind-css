@@ -1,0 +1,163 @@
+.table__wrapper {
+    overflow-y: auto;
+}
+
+table {
+    width: 100%;
+    min-width: 400px;
+    border-spacing: 0;
+    transition: all .3s linear;
+}
+
+thead {
+    background-color: #eee;
+}
+
+tr {
+    text-align: left;
+}
+
+th,
+td {
+    text-transform: capitalize;
+    padding: 15px 10px;
+    padding: 12px;
+}
+
+td:is(i, svg, span) {
+    font-size: 20px;
+    margin: 5px;
+}
+
+.table__row-action {
+    font-size: 20px;
+    margin: 10px 5px 5px 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding-top: 10px;
+}
+
+input {
+    font-size: 16px;
+    background-color: transparent;
+    border: none;
+    width: 91%;
+    padding: 5px;
+    font-family: 'Poppins', sans-serif;
+    transition: width .3s ease;
+}
+
+input:hover {
+    background-color: #fffaf3;
+}
+
+input:focus {
+    outline: 1px solid #ccc;
+    border: 1px solid #ccc;
+}
+
+
+tbody>tr:hover {
+    background-color: #2cccff;
+    color: #eee;
+    cursor: pointer;
+}
+
+.table__pagination {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.table__pagination-item~.table__pagination-item {
+    margin-left: 10px;
+}
+
+.table__pagination-item {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.table__pagination-item.active,
+.table__pagination-item.active:hover {
+    background-color: #eee;
+    color: #000;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.table__pagination-item:hover {
+    color: #000;
+    background-color: #2cccff;
+    cursor: pointer;
+}
+
+.table__search {
+    position: relative;
+    height: 40px;
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table__search>input {
+    height: 100%;
+    width: 100%;
+    padding: 10px 60px 10px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    color: #000;
+    background-color: #eee;
+}
+
+.table__search>i {
+    font-size: 1.5rem;
+    position: absolute;
+    right: 20px;
+}
+
+.table__search>svg {
+    font-size: 1.5rem;
+    position: absolute;
+    right: 20px;
+}
+
+tr.loading {
+    background-image: linear-gradient(to right, transparent 50%, rgba(0, 0, 0, .05) 50%);
+    background-size: 200% 100%;
+    animation: loading 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+tr.loading td {
+    opacity: .45;
+    pointer-events: none;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 0;
+    }
+
+    50% {
+        background-position: -30%;
+    }
+
+    80% {
+        background-position: -100%;
+    }
+
+    100% {
+        background-position: -200%;
+    }
+}

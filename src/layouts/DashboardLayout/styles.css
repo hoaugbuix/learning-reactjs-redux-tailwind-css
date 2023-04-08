@@ -1,0 +1,25 @@
+/* .dashboard__layout {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 2fr repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 100px;
+    column-gap: 10px;
+    row-gap: 1em;
+    color: #000;
+} */
+
+
+
+/* .layout {
+    color: var(--txt-color);
+}
+
+.layout__content {
+    padding-left: var(--sidebar-width);
+    background-color: var(--second-bg);
+    min-height: 100vh;
+}
+
+.layout__content-main {
+    padding: 30px;
+} */
