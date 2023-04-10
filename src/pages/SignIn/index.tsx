@@ -27,13 +27,15 @@ const SignIn = () => {
     // }
 
     const submitSignIn = (data: UserSignIn) => {
-        if (data.rememberMe) {
-            localStorage.setItem("username", data.usernameOrEmail);
-            localStorage.setItem("password", data.password);
-        }
+        // if (data.rememberMe) {
+        //     localStorage.setItem("username", data.usernameOrEmail);
+        //     localStorage.setItem("password", data.password);
+        // }
         requestUtils.post('/user/login', { ...data })
             .then(res => {
+                console.log(res.data.data)
                 navigate("/")
+                localStorage.setItem('user', res.data.data)
             })
             .catch(err => console.log(err))
     }
@@ -44,7 +46,7 @@ const SignIn = () => {
         if (storedUsername && storedPassword) {
             setValue("usernameOrEmail", storedUsername);
             setValue("password", storedPassword);
-            setValue("rememberMe", true)
+            // setValue("rememberMe", true)
         }
     })
 

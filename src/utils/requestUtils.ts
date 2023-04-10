@@ -26,8 +26,8 @@ const url = "http://localhost:8080/api/v1" || process.env.REACT_APP_API_URL;
 const requestUtils = axios.create({
     baseURL: url, // api base_url
     timeout: 5000, // request timeout
+    withCredentials: true,
     headers: { "Content-Type": "application/json" },
-    withCredentials: true
 });
 
 // request interceptor
