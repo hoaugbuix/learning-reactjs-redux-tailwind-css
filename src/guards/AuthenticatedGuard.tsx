@@ -11,8 +11,6 @@ const AuthenticationGuard: React.FC<AppRoutesType> = ({ component: Component, is
 
     const isAuth = getCookie('JWT_TOKEN');
 
-    console.log(isAuth)
-
     return (!isAuth ? <Navigate to={isPublic ? "/" : "/login"} /> : <Component {...rest} />);
 }
 
