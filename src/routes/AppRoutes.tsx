@@ -32,7 +32,7 @@ const AppRoutes = () => {
                     </Suspense>
                 }
                 />
-                <Route path="auth">
+                <Route path="">
                     <Route path='sign-in' element={
                         <Suspense fallback={<div>Loading...</div>}>
                             <ViewSignIn />
