@@ -1,8 +1,8 @@
 import React from "react";
 import "./styles.scss";
 import { Outlet } from "react-router-dom";
-import UiNavbar from "../../components/UiNavbar";
-import UiSidebar from "../../components/UiSidebar";
+import UiSidebar from "../../components/UiDashboard/UiSidebar";
+import UiNavbar from "../../components/UiDashboard/UiNavbar";
 
 const DashboardLayout = () => {
     return (

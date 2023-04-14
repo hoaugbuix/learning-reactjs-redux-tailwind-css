@@ -1,7 +1,35 @@
-.header__container {}
+@use "../../@styles/" as *;
 
-.header__content {}
+.header__container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 20px 50px;
+}
 
-.header__content-logo {}
+.header__content {
+    @include flex(center, space-between);
+}
 
-.header__content-link {}
+.header__content-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__content-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.header__content-nav-link {
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+}

@@ -1,0 +1,13 @@
+.main__layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+.main__layout-header {}
+
+.main__layout-aside {}
+
+.main__layout-main {}
+
+.main__layout-footer {}
