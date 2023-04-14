@@ -1,9 +1,12 @@
 import React from "react";
+import MainLayout from "../../layouts/MainLayout";
 
 const HomePage = () => {
     return (
         <>
-            <h1>HomePages</h1>
+            <MainLayout>
+
+            </MainLayout>
         </>
     )
 };

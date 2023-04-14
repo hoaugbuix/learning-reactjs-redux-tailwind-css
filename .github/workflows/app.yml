@@ -1,0 +1,18 @@
+name: Front End
+
+on:
+    push: 
+        branches: 
+            - 'dev'
+    pull_request:
+        branches:
+            - 'master'
+            - 'learning-redux'
+
+jobs:
+    hello:
+        runs-on: ubuntu-lastest
+        steps:
+            - name: Hello steps
+              run: echo "Hello word"
+

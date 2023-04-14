@@ -1,0 +1,18 @@
+@use "../../@styles" as *;
+
+.dashboard__layout {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.dashoard__layout-content {
+    flex-shrink: 0;
+    position: relative;
+}
+
+.dashboard__layout-main {
+    position: absolute;
+    top: 70px;
+    left: 0;
+}

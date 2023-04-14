@@ -1,0 +1,18 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-left: 200px;
+    z-index: 99;
+    height: 70px;
+    background-color: bisque;
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navabar__logo {
+    color: rgb(75, 169, 137);
+}
