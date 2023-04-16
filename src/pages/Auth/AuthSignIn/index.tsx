@@ -26,7 +26,7 @@ const AuthSignIn = () => {
                         <input type={showPass ? 'text' : 'password'} className="auth__form-group-input" required {...register('password')} />
                         <label className="auth__form-group-label">Password</label>
                         <span onClick={() => setShowPass(!showPass)}>
-                            {!!!showPass ? <IconName.IoEyeOff className="icon-show" /> : <IconName.IoEye className="icon-show" />}
+                            {!showPass ? <IconName.IoEyeOff className="icon-show" /> : <IconName.IoEye className="icon-show" />}
                         </span>
                     </div>
                     <div className="auth__form-group">

@@ -7,16 +7,16 @@ interface Props {
     children: ReactNode
 }
 
-const MainLayout: React.FC<Props> = ({ children }) => {
+const MainLayout = ({ children }: Props) => {
     return (
         <>
             <div className="main__layout">
-                <header className="main__layout-header">
+                {/* <header className="main__layout-header">
                     <UiHeader />
                 </header>
                 <aside className="main__layout-aside">
                     <UiSidebarCate />
-                </aside>
+                </aside> */}
                 <main className="main__layout-main">
                     {children}
                 </main>

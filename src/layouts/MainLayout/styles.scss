@@ -1,13 +1,27 @@
 .main__layout {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 20px;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        'main__layout-header main__layout-header'
+        'main__layout-aside main__layout-main'
+        'main__layout-aside main__layout-main'
+        'main__layout-footer main__layout-footer';
 }
 
-.main__layout-header {}
+.main__layout-header {
+    grid-area: main__layout-header;
+}
 
-.main__layout-aside {}
+.main__layout-aside {
+    grid-area: main__layout-aside;
+}
 
-.main__layout-main {}
+.main__layout-main {
+    grid-area: main__layout-main;
+}
 
-.main__layout-footer {}
+.main__layout-footer {
+    grid-area: main__layout-footer;
+
+}
