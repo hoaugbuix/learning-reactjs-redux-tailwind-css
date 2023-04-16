@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
 import "./styles.scss";
-import UiHeader from "../../components/UiHeader";
-import UiSidebarCate from "../../components/UiSidebarCate";
+// import UiHeader from "../../components/UiHeader";
+// import UiSidebarCate from "../../components/UiSidebarCate";
 
 interface Props {
     children: ReactNode
