@@ -1,0 +1,11 @@
+@use "../../@styles/" as *;
+
+
+.footer__wrap {
+    height: 100%;
+    min-height: 100px;
+    width: 100%;
+    background-color: #fff;
+    @include flex(center, center);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}

@@ -9,6 +9,39 @@ const UiSidebarCate = () => {
                     <li className="sidebar__cate-list-item">
                         Home
                     </li>
+                    <li className="sidebar__cate-list-item">
+                        Home
+                    </li>
+                    <li className="sidebar__cate-list-item">
+                        Home
+                    </li>
+                    <li className="sidebar__cate-list-item">
+                        Home
+                    </li>
+                    <li className="sidebar__cate-list-item">
+                        Home
+                    </li>
+                    <li className="sidebar__cate-list-item">
+                        Home
+                    </li>
+                    <li className="sidebar__cate-list-item">
+                        Home
+                    </li>
+                    <li className="sidebar__cate-list-item">
+                        Home
+                    </li>
+                    <li className="sidebar__cate-list-item">
+                        Home
+                    </li>
+                    <li className="sidebar__cate-list-item">
+                        Home
+                    </li>
+                    <li className="sidebar__cate-list-item">
+                        Home
+                    </li>
+                    <li className="sidebar__cate-list-item">
+                        Home
+                    </li>
                 </ul>
             </div>
         </>

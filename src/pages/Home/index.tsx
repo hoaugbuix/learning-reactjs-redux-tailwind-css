@@ -1,54 +1,57 @@
-import React, { useEffect } from "react";
+import React, { useRef, useState } from "react";
+import "./styles.scss";
 import MainLayout from "../../layouts/MainLayout";
-// import useHookApi from '../../hooks//useHookApi';
-import axios from "axios";
 
-// export enum ServicesLanguage {
-//     fetchListPost = "/posts",
-//     fetchOnePost = "/posts",
-//     createOnePost = "/posts",
-// }
+const videos = [
+    "https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+    "https://storage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+    "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+    "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+    "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
+    "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
+    "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4",
+    "https://storage.googleapis.com/gtv-videos-bucket/sample/Sintel.jpg",
+    "https://storage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4",
+    "https://storage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4"
+]
 
-// interface Post {
-//     userId: string,
-//     id: string,
-//     title: string,
-//     body: string
-// }
 const HomePage = () => {
-    // const { stateFetchList: stateFetchPost, stateCreateOne: stateCreatePost, getList: getListPost, createOne: createOnePost } = useHookApi<Post>();
+    const videoRef: any = useRef(null);
+    const [isPlaying, setIsPlaying] = useState(false);
 
-    const getData = async () => {
-        await axios.get('https://jsonplaceholder.typicode.com/users')
-            .then(res => {
-                console.log(res)
-            })
-    }
+    const handlePlay = () => {
+        setIsPlaying(true);
+        videoRef.current.play();
+    };
 
-    useEffect(() => {
-        getData()
-    }, []);
-
-    // if (stateFetchPost.isPending) {
-    //     return <h1>..Loading</h1>
-    // }
-    // const onSubmitForm = async (item: Post) => {
-    //     await createOnePost(ServicesLanguage.createOnePost, item)
-    //     if (stateCreatePost.isSuccess) {
-    //         alert('OK')
-    //     }
-    // }
+    const handlePause = () => {
+        setIsPlaying(false);
+        videoRef.current.pause();
+    };
     return (
         <>
             <MainLayout>
-                {/* {stateFetchPost.isPending && 'Loading.....'}
-                {stateFetchPost.data && stateFetchPost.data?.map((item, index) => {
-                    return <div
-                        key={index}>
+                {/* <div className="icon">Main</div>
+                <div className="icon">Main</div>
+                <div className="icon">Main</div>
+                <div className="icon">Main</div>
+                <div className="icon">Main</div>
+                <div className="icon">Main</div>
+                <div className="icon">Main</div>
+                <div className="icon">Main</div>
+                <div className="icon">Main</div>
+                <div className="icon">Main</div>
+                <div className="icon">Main</div> */}
+                {
+                    videos.map((item, i) => (
+                        <div key={i}>
+                            <video ref={videoRef} src={item} />
+                            {!isPlaying && <button onClick={handlePlay}>Play</button>}
+                            {isPlaying && <button onClick={handlePause}>Pause</button>}
+                        </div>
+                    ))
+                }
 
-                        <button onClick={() => onSubmitForm(item)}>{item.id}</button>
-                    </div>
-                })} */}
             </MainLayout>
         </>
     )
